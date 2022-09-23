@@ -30,6 +30,24 @@ def start():
 
         elif ion == ion_pc:
             print("         Match")
+        
+        elif ion == 0:
+            if ion_pc == 1:
+                print("         You lose")
+            else:
+                print("         You win")
+        
+        elif ion == 1:
+            if ion_pc == 2:
+                print("         You lose")
+            else:
+                print("         You win")
+        
+        elif ion == 2:
+            if ion_pc == 0:
+                print("         You lose")
+            else:
+                print("         You win")
 
 
         
