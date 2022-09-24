@@ -13,7 +13,7 @@ def start():
 
         if guess == "esc".lower():
             print("\n----------------\n\nGAME OVER")
-            sys.exit()
+            break
 
         if guess.lower() in ["rock", "r"]:
             ion = 0
@@ -24,30 +24,18 @@ def start():
         if guess.lower() in ["scissors", "s"]:
             ion = 2
         
-
+        # evaluating part
         if ion == -1:
             print("         select valid word or character")
 
         elif ion == ion_pc:
             print("         Match")
         
-        elif ion == 0:
-            if ion_pc == 1:
-                print("         You lose")
-            else:
-                print("         You win")
+        elif (ion + 1) % 3 == ion_pc:
+            print("         You lose")
         
-        elif ion == 1:
-            if ion_pc == 2:
-                print("         You lose")
-            else:
-                print("         You win")
-        
-        elif ion == 2:
-            if ion_pc == 0:
-                print("         You lose")
-            else:
-                print("         You win")
+        else:
+            print("         You win")
 
 
         
