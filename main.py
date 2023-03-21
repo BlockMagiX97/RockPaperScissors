@@ -1,4 +1,3 @@
-import sys
 import random
 
 def start():
@@ -6,32 +5,32 @@ def start():
     print("\n----------------\n\nLet's Start")
     print("\n----------------\n\nRock Paper Scissors Go!!!: ")
     while True:
-        ion = -1
-        ion_pc = random.randrange(0, 3)
+        user_input_index = -1
+        machine_input_index = random.randrange(0, 3)
         guess = input("     Rock(r), Paper(p), Scissors(s): ")
 
 
-        if guess == "esc".lower():
+        if guess.lower() == "esc":
             print("\n----------------\n\nGAME OVER")
             break
 
         if guess.lower() in ["rock", "r"]:
-            ion = 0
+            user_input_index = 0
             
         if guess.lower() in ["paper", "p"]:
-            ion = 1
+            user_input_index = 1
 
         if guess.lower() in ["scissors", "s"]:
-            ion = 2
+            user_input_index = 2
         
         # evaluating part
-        if ion == -1:
+        if user_input_index == -1:
             print("         select valid word or character")
 
-        elif ion == ion_pc:
+        elif user_input_index == machine_input_index:
             print("         Match")
         
-        elif (ion + 1) % 3 == ion_pc:
+        elif (user_input_index + 1) % 3 == machine_input_index:
             print("         You lose")
         
         else:
