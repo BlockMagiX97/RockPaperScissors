@@ -14,13 +14,13 @@ def start():
             print("\n----------------\n\nGAME OVER")
             break
 
-        if guess.lower() in ["rock", "r"]:
+        elif guess.lower() in ["rock", "r"]:
             user_input_index = 0
             
-        if guess.lower() in ["paper", "p"]:
+        elif guess.lower() in ["paper", "p"]:
             user_input_index = 1
 
-        if guess.lower() in ["scissors", "s"]:
+        elif guess.lower() in ["scissors", "s"]:
             user_input_index = 2
         
         # evaluating part
